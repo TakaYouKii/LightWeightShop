@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "395974221472",
+    "project_id": "lwbm-5ec5c",
+    "storage_bucket": "lwbm-5ec5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395974221472:android:00bcd918076d65c2fdf3c5",
+        "android_client_info": {
+          "package_name": "com.example.biometricapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfKi0jrKBgZ6scwLyVzTmnwA3u7b5-sCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
