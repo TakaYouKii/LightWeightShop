@@ -16,17 +16,21 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         with(binding){
             btnLogin.setOnClickListener{
-                if(etEmail.text.isEmpty() || etPassword.text.isEmpty()){
+                if(etEmail.text.toString().isEmpty() || etPassword.text.toString().isEmpty()){
                     Toast.makeText(applicationContext, "Пусто, нельзя так ц ц ц", Toast.LENGTH_SHORT).show()
                 }else{
-                    FirebaseAuth.getInstance().signInWithEmailAndPassword(etEmail.text.toString(), etPassword.text.toString())
+                    FirebaseAuth.getInstance().signInWithEmailAndPassword(etEmail.text.toString().trim(), etPassword.text.toString().trim())
                         .addOnCompleteListener {task ->
                             if(task.isSuccessful){
                                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
                                 startActivity(intent)
                             }
+                        }
+                        .addOnFailureListener{
+                            Toast.makeText(applicationContext, "не правильно", Toast.LENGTH_SHORT).show()
                         }
                 }
             }

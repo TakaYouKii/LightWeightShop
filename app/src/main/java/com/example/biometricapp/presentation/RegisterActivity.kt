@@ -24,7 +24,7 @@ class RegisterActivity : AppCompatActivity() {
             val username = etUsername.text.toString().trim()
             btnSignUp.setOnClickListener{
                 if(email.isEmpty() || password.isEmpty() || username.isEmpty()){
-                    Toast.makeText(applicationContext, "Пусто, нельзя так ц ц ц", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, "Пусто, нельзя так ц ц ц $email $password", Toast.LENGTH_SHORT).show()
                 }else{
                     FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(){task->
