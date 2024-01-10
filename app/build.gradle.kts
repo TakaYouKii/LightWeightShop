@@ -70,5 +70,6 @@ dependencies {
     //Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
 
-
+    //Glide
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 }
